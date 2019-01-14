@@ -10,7 +10,6 @@ import HighchartsReact from 'highcharts-react-official';
 import { Jumbotron,Button, Nav, NavLink} from 'reactstrap';
 import { Link } from 'react-router-dom';
 import "./style.css";
-import "./TeamProfile.js";
  
 var optionsPie = {
   chart: {

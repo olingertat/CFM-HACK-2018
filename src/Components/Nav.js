@@ -6,26 +6,17 @@ import { Nav, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, Dropd
 class NavBar extends React.Component {
   render () {
     var numTeam = [];
-    for(var i = 1; i < 11; i++) {
+    for(var i = 1; i < 2; i++) {
       numTeam.push(i);
     }
     const teamsNavLink = numTeam.map((num) => 
-      <NavLink tag={Link} key={num} to={'/submission/team/'+num}>Team {num}</NavLink>
+      <NavLink tag={Link} key={num} to={'/submission/team/'+num}>Submission</NavLink>
     )
     return(
       <div className='home-container'>
         <Nav pills>
           <NavLink tag={Link} to='/'>Home</NavLink>
-          <NavLink tag={Link} to='/example'>Example</NavLink>
-          <NavLink tag={Link} to='/result'>Result</NavLink>
-          <UncontrolledDropdown nav inNavbar>
-            <DropdownToggle nav caret>
-              Submission
-            </DropdownToggle>
-            <DropdownMenu right>
-              <DropdownItem>{teamsNavLink}</DropdownItem>
-            </DropdownMenu>
-          </UncontrolledDropdown>
+          {teamsNavLink[0]}
         </Nav>
       </div>
   );
